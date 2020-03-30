@@ -1,21 +1,22 @@
-# Googletests
+# Googletest
 
 ## Установка
     
 1. Перейти в директорию с проектом </br>
-    * тут скрин
-2. Открыть терминал
-    * тут скрин
+    ![initial_state](https://i.imgur.com/Wkw5AvD.png)
+2. Открыть терминал</br>
+    ![opened_terminal](https://i.imgur.com/dBVxwWm.png)
 3. Выполнить команды
-    > git clone https://github.com/google/googletest.git
-    > sudo apt-get install libgtest-dev
-    > sudo apt-get install cmake
-    > cd /usr/src/gtest
-    > sudo cmake CMakeLists.txt
-    > sudo make
+    > git clone https://github.com/google/googletest.git</br>
+    > sudo apt-get install libgtest-dev</br>
+    > sudo apt-get install cmake</br>
+    > cd /usr/src/gtest</br>
+    > sudo cmake CMakeLists.txt</br>
+    > sudo make</br>
     > sudo cp *.a /usr/lib
-4. Состояние
-    * тут скрин
+4. Состояние:</br>
+    ![gtest_cloned](https://i.imgur.com/z5Q4MRg.png)
+    
 
 ## Тестируемый класс
 ```cpp
