@@ -1,10 +1,11 @@
-cmake_minimum_required(VERSION 3.0.0)
+cmake_minimum_required(VERSION 3.5)
 
-add_executable(runTests tests/CGraph.cpp)
-target_link_libraries(runTests asan)
+project("HelloWorld")
 
-target_compile_options(runTests
-        PUBLIC -fsanitize=address
-        PUBLIC -fno-omit-frame-pointer
-        PUBLIC -O0
-        PUBLIC -g)
+find_package(Catch2 REQUIRED)
+add_executable(foo tests/CGraph.cpp)
+target_link_libraries(foo Catch2::Catch2)
+
+include(CTest)
+include(Catch)
+catch_discover_tests(foo)
