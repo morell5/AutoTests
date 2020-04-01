@@ -1,0 +1,5 @@
+add_test( EdgeExistance D:/Programs/Github/AutoTests/project_build/testExecutable.exe EdgeExistance)
+set_tests_properties( EdgeExistance PROPERTIES WORKING_DIRECTORY D:/Programs/Github/AutoTests/project_build)
+add_test( NumEdges D:/Programs/Github/AutoTests/project_build/testExecutable.exe NumEdges)
+set_tests_properties( NumEdges PROPERTIES WORKING_DIRECTORY D:/Programs/Github/AutoTests/project_build)
+set( testExecutable_TESTS EdgeExistance NumEdges)
