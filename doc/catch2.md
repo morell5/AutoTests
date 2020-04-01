@@ -1,6 +1,6 @@
 # Catch 2
 
-## Установка на ОС Windows
+## ОС Windows
 1. Установить MinGW
     1. Скачиваем [mingw-get-setup.exe](http://www.mingw.org/wiki/Getting_Started)
     2. Устанавливаем в "C:\MinGW"
