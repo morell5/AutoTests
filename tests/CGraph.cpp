@@ -10,7 +10,8 @@ TEST_CASE("EdgeExistance", "PushEdge") {
     for (int i = 0; i < numVertices - 1; i++) {
         graph.PushEdge(i, i + 1, i + 1);
     } 
-    REQUIRE(graph.EdgeExist(12, 1));
+    // Correct!
+    REQUIRE(graph.EdgeExist(0, 1));
     REQUIRE(graph.EdgeExist(1, 2));
     REQUIRE(graph.EdgeExist(2, 3));
 }
@@ -23,5 +24,6 @@ TEST_CASE( "NumEdges", "PushEdge") {
     for (int i = 0; i < numVertices - 1; i++) {
         graph.PushEdge(i, i + 1, i + 1);
     }
-    REQUIRE( graph.NumEdges() == numVertices - 1);
+    // Fail!
+    REQUIRE( graph.NumEdges() == numVertices);
 }
