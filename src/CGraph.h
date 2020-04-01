@@ -36,10 +36,7 @@ CGraph<DistanceType>::CGraph(int _numVertices, int _distanceSentinel) :
 
 template<class DistanceType>
 CGraph<DistanceType>::~CGraph() {
-  for (int i = 0; i < numVertices; i++) {
-    delete weights[i];
-  }
-  delete[] weights;
+ 
 }
 
 template<class DistanceType>
