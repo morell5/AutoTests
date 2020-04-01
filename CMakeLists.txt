@@ -4,7 +4,7 @@ project("TestProject")
 
 find_package(Catch2 REQUIRED)
 add_executable(testExecutable tests/CGraph.cpp)
-target_link_libraries(testExecutable Catch2::Catch2)
+target_link_libraries(testExecutable  Catch2::Catch2)
 
 include(CTest)
 include(Catch)
