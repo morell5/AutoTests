@@ -5,14 +5,20 @@
     1. Скачиваем [mingw-get-setup.exe](http://www.mingw.org/wiki/Getting_Started)
     2. Устанавливаем в "C:\MinGW"
     3. При установке выбираем все пункты в Base
+
+    ![MinGW_installation](https://i.imgur.com/orgwG0M.jpg)
 2. Установить CMake
     1. Скачиваем [cmake-3.17.0-win64-x64.msi](https://cmake.org/download/)
     2. Устанавливаем в "C:\Program Files\CMake\"
     3. Добавляем в переменную окружения **PATH**
+
+    ![CMake_PATH](https://i.imgur.com/Sl2lc2M.jpg)
 3. Делегируем права администратора среде разрабоотки
 
+    ![VSCode_Admin](https://i.imgur.com/ESjrAVw.jpg)
 4. Переходим в рабочую директорию
 
+    ![Initial_Working_Directory](https://i.imgur.com/DAyLq9C.jpg)
 5. Устанавливаем Catch2
     1. Клонируем проект Catch2 в рабочую директорию
         > git clone https://github.com/catchorg/Catch2.git
@@ -61,6 +67,8 @@
 9. Запускаем тесты
     1. Переходим в директорию с CMakeLists.txt своего проекта
         > cd ..
+
+        ![Working_Directory_Path](https://i.imgur.com/GzcViH0.jpg)
     2. Компилируем свой проект
         > cmake -G "MinGW Makefiles" -B..\project_build -S.
         > cmake --build ..\project_build</br>
