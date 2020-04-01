@@ -26,12 +26,17 @@
 5. Устанавливаем Catch2
     1. Клонируем проект Catch2 в рабочую директорию
         > git clone https://github.com/catchorg/Catch2.git
+
+        ![Catch2_cloned](https://i.imgur.com/Sl2lc2M.jpg)
     2. Переходим в директорию с CMakeLists.txt проекта Catch2
         > cd Catch2
+
+        ![Catch2_path](https://i.imgur.com/Sl2lc2M.jpg)
     3. Компилируем проект Catch2
-        > cmake -G "MinGW Makefiles" -B..\catch2_build -S.
+        > cmake -G "MinGW Makefiles" -B..\catch2_build -S.</br>
         > cmake --build ..\catch2_build --target install
 
+        ![Catch2_Build](https://i.imgur.com/Sl2lc2M.jpg)
 6. Подключаем header "catch.hpp" в файл с тестами 
     ```cpp
     #define CATCH_CONFIG_MAIN
@@ -69,15 +74,18 @@
     include(Catch)
     catch_discover_tests(testExecutable)
     ```
-    
+
 9. Запускаем тесты
     1. Переходим в директорию с CMakeLists.txt своего проекта
         > cd ..
 
         ![Working_Directory_Path](https://i.imgur.com/GzcViH0.jpg)
     2. Компилируем свой проект
-        > cmake -G "MinGW Makefiles" -B..\project_build -S.
-        > cmake --build ..\project_build</br>
-        Скрин состояния директории после компиляции
+        > cmake -G "MinGW Makefiles" -Bproject_build -S.</br>
+        > cmake --build project_build
+
+        ![Project_Build](https://i.imgur.com/Sl2lc2M.jpg)        
     3. Запускаем тесты
-        Скрин запуска тестов
+        > project_build\testExecutable.exe
+    
+        ![Tests_Passed](https://i.imgur.com/Sl2lc2M.jpg)
