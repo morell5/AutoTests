@@ -1,13 +1,27 @@
 #define CATCH_CONFIG_MAIN
-#include "..\Catch2\single_include\catch2\catch.hpp"
+#include <catch2\catch.hpp>
+#include "..\src\CGraph.h"
 
-unsigned int Factorial( unsigned int number ) {
-    return number <= 1 ? number : Factorial(number-1)*number;
+TEST_CASE("EdgeExistance", "PushEdge") {
+    INFO( "TEST_CASE:EdgeExistance Property:PushEdge started!");
+    const int numVertices = 4;
+    const int sentinelDistance = 100;
+    CGraph<int> graph(numVertices, sentinelDistance);
+    for (int i = 0; i < numVertices - 1; i++) {
+        graph.PushEdge(i, i + 1, i + 1);
+    } 
+    REQUIRE(graph.EdgeExist(12, 1));
+    REQUIRE(graph.EdgeExist(1, 2));
+    REQUIRE(graph.EdgeExist(2, 3));
 }
 
-TEST_CASE( "Factorials are computed", "[factorial]" ) {
-    REQUIRE( Factorial(1) == 1 );
-    REQUIRE( Factorial(2) == 2 );
-    REQUIRE( Factorial(3) == 6 );
-    REQUIRE( Factorial(10) == 3628800 );
+TEST_CASE( "NumEdges", "PushEdge") {
+    INFO( "TEST_CASE:NumEdges Property:PushEdge started!");
+    const int numVertices = 4;
+    const int sentinelDistance = 100;
+    CGraph<int> graph(numVertices, sentinelDistance);
+    for (int i = 0; i < numVertices - 1; i++) {
+        graph.PushEdge(i, i + 1, i + 1);
+    }
+    REQUIRE( graph.NumEdges() == numVertices - 1);
 }
