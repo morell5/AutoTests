@@ -34,7 +34,7 @@
         ![Catch2_path](https://i.imgur.com/tzdFnia.jpg)
     3. Компилируем проект Catch2
         > cmake -G "MinGW Makefiles" -B..\catch2_build -S.</br>
-        > cmake --build ..\catch2_build --target installz
+        > cmake --build ..\catch2_build --target install
 
         ![Catch2_Build](https://i.imgur.com/e3Cn3G7.jpg)
 6. Подключаем header "catch.hpp" в файл с тестами 
